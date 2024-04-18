@@ -20,5 +20,20 @@ namespace Bouncing_Ball
         {
             InitializeComponent();
         }
+
+        private void MoveBall(ref double x, ref double y, ref int xChange, ref int yChange)
+        {
+            if ((x <= 0) || (x >= ballCanvas.Width))
+            {
+                xChange = -xChange;
+            }
+            if ((y <= 0) || (y >= ballCanvas.Height))
+            {
+                yChange = -yChange;
+            }
+
+            x = x + xChange;
+            y = y + yChange;
+        }       
     }
 }
