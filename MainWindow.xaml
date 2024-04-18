@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bouncing_Ball"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Bouncing ball" Height="355" Width="348">
     <Grid>
-
+        <Canvas HorizontalAlignment="Left" Height="301"
+                Margin="10,10,0,0" VerticalAlignment="Top" Width="315"
+                Name="ballCanvas" MouseUp="ballCanvas_MouseUp"
+                Background="LightGray" ClipToBounds="True"/>
     </Grid>
 </Window>
