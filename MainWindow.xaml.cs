@@ -34,6 +34,18 @@ namespace Bouncing_Ball
 
             x = x + xChange;
             y = y + yChange;
-        }       
+        }     
+
+        private void DrawBall(double x, double y, double diameter)
+        {
+            Ellipse ellipse = new Ellipse()
+            {
+                Stroke = new SolidColorBrush(Colors.Blue),
+                Width = diameter,
+                Height = diameter,
+                Margin = new Thickness(x, y, 0, 0)
+            };
+            ballCanvas.Children.Add(ellipse);
+        }        
     }
 }
