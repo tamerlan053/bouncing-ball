@@ -21,6 +21,21 @@ namespace Bouncing_Ball
             InitializeComponent();
         }
 
+        private void ballCanvas_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            int xChange = 10;
+            int yChange = 4;
+
+            double x = 10;
+            double y = 10;
+            double diameter = 15;
+            for (int count = 0; count < 200; count++)
+            {
+                MoveBall(ref x, ref y, ref xChange, ref yChange);
+                DrawBall(x, y, diameter);
+            }
+        }        
+
         private void MoveBall(ref double x, ref double y, ref int xChange, ref int yChange)
         {
             if ((x <= 0) || (x >= ballCanvas.Width))
